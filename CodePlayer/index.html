@@ -15,38 +15,64 @@
 </head>
     
     <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+             font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+            font-weight: 300;
+        }
     
-        #square {
-            height: 200px;
-            width: 200px;
-            background-color: green;
+        #menuBar {
+            width: 100%;
+            height: 40px;
+            background-color: lightgrey;
+            border-bottom: 1px solid grey;
         }
         
-        #target {
-            height: 300px;
-            width: 300px;
-            background-color: red;
+        #logo {
+            padding: 5px 0 0 20px;
+            font-weight: bold;
+            font-size:120%; 
+            float: left;
         }
+        
+        #buttonDiv{
+            float: right;
+            padding: 5px 10px 0 0;
+        }
+        
+        #runButton {
+            font-size: 120%;
+            border-radius: 50px;
+        }
+        
     </style>
 
 <body>
     
-    <div id="square">Drag me around</div>
+    <div id="wrapper">
     
-    <div id="target"></div>
-         
+        <div id="menuBar">
+        
+            <div id="logo">Code player</div>
+                
+            <div id="buttonDiv">
+            
+                <button id="runButton">Run</button>
+                
+            </div>
+            
+        </div>    
+    
+    
+    </div>
+    
     
     <script>
         
-        $("#square").draggable();
     
-        $("#target").droppable({
-            drop: function(ui, event) {
-                
-                $("#target").css("background-color", "blue");
-                
-            }
-        });
     </script>
 
   
